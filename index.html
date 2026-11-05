@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSTAFO | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020817;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid #10294c;
+    position: sticky;
+    top: 0;
+    background: #020817;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #16baff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 13px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #16baff;
+}
+
+.telegram {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #168cff;
+    padding: 12px 18px;
+    border-radius: 30px;
+}
+
+/* HOME */
+
+.home {
+    min-height: 550px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-text {
+    max-width: 500px;
+}
+
+.home-text small {
+    color: #16baff;
+    letter-spacing: 3px;
+}
+
+.home h1 {
+    font-size: 60px;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.home h1 span {
+    color: #159cff;
+}
+
+.home h3 {
+    color: #16baff;
+    margin-bottom: 18px;
+}
+
+.home p {
+    color: #b8c8dc;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    background: #078cff;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #16baff;
+    box-shadow: 0 0 25px #078cff;
+    transform: translateY(-4px);
+}
+
+/* M LOGO */
+
+.photo {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #078cff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 180px;
+    font-weight: bold;
+    color: #16baff;
+    box-shadow: 0 0 50px #078cff55;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* INFO */
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 35px 7%;
+    border-top: 1px solid #10294c;
+    border-bottom: 1px solid #10294c;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 170px;
+}
+
+.info-box h4 {
+    color: #16baff;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #c4d3e5;
+    line-height: 1.6;
+}
+
+/* SECTION */
+
+section {
+    padding: 70px 7%;
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.title span {
+    color: #16baff;
+}
+
+.about p {
+    max-width: 750px;
+    color: #bdcce0;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: #071a35;
+    border: 1px solid #123e70;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #16baff;
+    transform: translateY(-5px);
+}
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: #071a35;
+    border: 1px solid #123e70;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: #16baff;
+    box-shadow: 0 0 20px #078cff22;
+}
+
+.project span {
+    color: #16baff;
+    font-size: 28px;
+}
+
+.project h3 {
+    margin: 20px 0 12px;
+}
+
+.project p {
+    color: #bdcce0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.project a {
+    display: inline-block;
+    color: #16baff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    background: #06132b;
+}
+
+.contact p {
+    color: #bdcce0;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8da3c0;
+    border-top: 1px solid #10294c;
+}
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .home {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 43px;
+    }
+
+    .photo {
+        width: 220px;
+        height: 220px;
+        font-size: 130px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1. HEADER -->
+
+<header>
+    <div class="logo">M.</div>
+
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#yonalish">Yo'nalish</a>
+        <a href="#soha">Soha</a>
+        <a href="#ilovalar">Ilovalar</a>
+        <a href="#aloqa">Aloqa</a>
+    </nav>
+
+    <a class="telegram" href="https://t.me/Mustafo_373">
+        Telegram ↗
+    </a>
+</header>
+
+<!-- 2. HOME -->
+
+<div class="home" id="home">
+
+    <div class="home-text">
+        <small>SALOM, MEN</small>
+
+        <h1>
+            MUSTAFO<br>
+            <span>BAXTIYOROV</span>
+        </h1>
+
+        <h3>Frontend Developer</h3>
+
+        <p>
+            Men zamonaviy texnologiyalar olamiga qiziquvchi,
+            IT sohasida o'z bilim va tajribamni oshirib
+            borayotgan yosh dasturchiman.
+        </p>
+
+        <a href="#ilovalar" class="btn">
+            Loyihalarim →
+        </a>
+
+        <a href="#aloqa" class="btn">
+            Aloqa
+        </a>
+    </div>
+
+    <div class="photo">M</div>
+
+</div>
+
+<!-- 3. INFO -->
+
+<div class="info" id="yonalish">
+
+    <div class="info-box">
+        <h4>Ism</h4>
+        <p>MUSTAFO BAXTIYOROV</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Yo'nalish</h4>
+        <p>Frontend Developer</p>
+    </div>
+
+    <div class="info-box" id="soha">
+        <h4>Soha</h4>
+        <p>Web dasturlash, IT, Sun'iy intellekt</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Ilovalar</h4>
+        <p>OU7 AI, Tasbeh, Qarz daftari</p>
+    </div>
+
+    <div class="info-box">
+        <h4>Aloqa</h4>
+        <p>@Mustafo_373</p>
+    </div>
+
+</div>
+
+<!-- MEN HAQIMDA -->
+
+<section class="about">
+
+    <h2 class="title">MEN <span>HAQIMDA.</span></h2>
+
+    <p>
+        Men zamonaviy texnologiyalar olamiga qiziquvchi,
+        IT sohasida o'z bilim va tajribamni oshirib
+        borayotgan yosh dasturchiman. Maqsadim —
+        kreativ g'oyalarni zamonaviy loyihalarga
+        aylantirish va kelajakda kuchli IT mutaxassisi bo'lish.
+    </p>
+
+</section>
+
+<!-- BILIMLAR -->
+
+<section>
+
+    <h2 class="title">MENING <span>SOHAM.</span></h2>
+
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Web Design</div>
+        <div class="skill">Frontend</div>
+        <div class="skill">IT</div>
+    </div>
+
+</section>
+
+<!-- 4. ILOVALAR -->
+
+<section id="ilovalar">
+
+    <h2 class="title">MENING <span>LOYIHALARIM.</span></h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <span>01</span>
+            <h3>OU7 AI</h3>
+            <p>Sun'iy intellekt asosidagi zamonaviy loyiha.</p>
+            <a href="#">Ko'rish →</a>
+        </div>
+
+        <div class="project">
+            <span>02</span>
+            <h3>Tasbeh</h3>
+            <p>Zikrlarni tanlash va tasbeh sanash loyihasi.</p>
+            <a href="#">Ko'rish →</a>
+        </div>
+
+        <div class="project">
+            <span>03</span>
+            <h3>Qarz daftari</h3>
+            <p>Qarzlarni yozib borish va hisoblash dasturi.</p>
+            <a href="#">Ko'rish →</a>
+        </div>
+
+        <div class="project">
+            <span>04</span>
+            <h3>Game Project</h3>
+            <p>O'yinlar va interaktiv g'oyalar loyihasi.</p>
+            <a href="#">Ko'rish →</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 5. ALOQA -->
+
+<section class="contact" id="aloqa">
+
+    <h2 class="title">MEN BILAN <span>BOG'LANING.</span></h2>
+
+    <p>Yangi g'oyalar va loyihalar uchun doim tayyorman.</p>
+
+    <a href="https://t.me/Mustafo_373" class="btn">
+        Telegram orqali yozish ↗
+    </a>
+
+</section>
+
+<footer>
+    © 2026 MUSTAFO BAXTIYOROV
+</footer>
+
+</body>
+</html>
